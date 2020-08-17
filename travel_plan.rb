@@ -7,8 +7,7 @@ plans = [
 ]
 
 puts "旅行プランを選択してください"
-plans.each_with_index do |plan, num|
-  num += 1
+plans.each.with_index(1) do |plan, num|
   puts "#{num}. #{plan[:place]}旅行(¥#{plan[:price].to_s(:delimited)})"
 end
 
